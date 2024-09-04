@@ -6,8 +6,7 @@ The Inventory Management System is a web application designed to streamline inve
 
 ## Demo Video
 
-[Watch the Demo Video](https://example.com/demo-video)  
-*Note: Replace with the actual URL of your recorded demo video.*
+[Watch the Demo Video](Screen-Recording-2024-09-04T13_01_13.342Z.mp4) 
 
 ## Important Links
 
