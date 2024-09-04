@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Report</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://login2explore.com/jpdb/resources/js/0.0.4/jpdb-commons.js"></script>
+</head>
+<body>
+    <header>
+        <header>
+            <h1>Inventory Management System</h1>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="item-management.html" onclick="loadPage('item-management.html')">Item Management</a></li>
+                    <li><a href="item-received.html" onclick="loadPage('item-received.html')">Item Received</a></li>
+                    <li><a href="item-issue.html" onclick="loadPage('item-issue.html')">Item Issue</a></li>
+                    <li><a href="item-report.html" onclick="loadPage('item-report.html')">Item Report</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1>Item Report</h1>
+    </header>
+    
+    <main>
+        <form id="report-form">
+            <label for="startItemId">Start Item ID:</label>
+            <input type="text" id="startItemId" name="startItemId">
+            
+            <label for="endItemId">End Item ID:</label>
+            <input type="text" id="endItemId" name="endItemId">
+            
+            <button type="button" onclick="generateReport()">Generate Report</button>
+        </form>
+        
+        <table id="itemReportTable">
+            <thead>
+                <tr>
+                    <th>Item ID</th>
+                    <th>Item Name</th>
+                    <th>Current Stock</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Report rows will be added here -->
+            </tbody>
+        </table>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Inventory Management System</p>
+    </footer>
+
+    <!-- Ensure this script is included at the bottom -->
+    <script src="script4.js"></script>
+</body>
+</html>

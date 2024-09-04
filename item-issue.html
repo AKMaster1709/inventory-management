@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Item Issue</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://login2explore.com/jpdb/resources/js/0.0.4/jpdb-commons.js"></script>
+    <script src="script3.js"></script>
+</head>
+<body>
+    <header>
+        <header>
+            <h1>Inventory Management System</h1>
+            <nav id="main-nav">
+                <ul>
+                    <li><a href="item-management.html" onclick="loadPage('item-management.html')">Item Management</a></li>
+                    <li><a href="item-received.html" onclick="loadPage('item-received.html')">Item Received</a></li>
+                    <li><a href="item-issue.html" onclick="loadPage('item-issue.html')">Item Issue</a></li>
+                    <li><a href="item-report.html" onclick="loadPage('item-report.html')">Item Report</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h1>Item Issue Management</h1>
+    </header>
+    
+    <main>
+        <form id="item-issue-form">
+            <label for="issueNo">Issue No:</label>
+            <input type="text" id="issueNo" name="issueNo" onblur="checkIssueExistence()">
+
+            <label for="issueDate">Issue Date:</label>
+            <input type="date" id="issueDate" name="issueDate">
+
+            <label for="itemId">Item ID:</label>
+            <input type="text" id="itemId" name="itemId" onblur="checkItemExistence()">
+            <span id="itemName"></span>
+
+            <label for="quantityIssued">Quantity:</label>
+            <input type="number" id="quantityIssued" name="quantityIssued" step="0.001" onblur="validateQuantity()">
+
+            <button type="button" id="save" onclick="saveIssueData()">Save</button>
+           <!-- <button type="button" id="edit" onclick="editIssueData()">Edit</button> -->
+            <button type="button" id="reset" onclick="resetForm()">Reset</button>
+        </form>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Inventory Management System</p>
+    </footer>
+</body>
+</html>
